@@ -11,25 +11,48 @@ const useFirebase = () => {
 
     const auth = getAuth();
     const signinUsingGoogle = () => {
-      return  signInWithPopup(auth, googleprovider)
+       signInWithPopup(auth, googleprovider)
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+        // setUser(user);
+        setUser(user);
+        
+    })
+    .catch((error)=>{
+        setError(error.massage)
+    })
     }
 
-    signOut(auth).then(() => {
-        // Sign-out successful.
-    }).catch((error) => {
-        // An error happened.
-    });
+    const logOut = ()=>{
+        signOut (auth)
+        .then(()=>{
+            setUser({})
+        })
+    }
+
+    // signOut(auth).then(() => {
+    //     // Sign-out successful.
+    // }).catch((error) => {
+    //     // An error happened.
+    // });
 
     useEffect(()=>{
-        const unsubscribe = onAuthStateChanged (auth, user =>{
+
+        onAuthStateChanged(auth, user=>{
             if(user){
                 setUser(user)
             }
-            else{
-                setUser({})
-            }
         })
-        return ()=> unsubscribe
+        // const unsubscribe = onAuthStateChanged (auth, user =>{
+        //     if(user){
+        //         setUser(user)
+        //     }
+        //     else{
+        //         setUser({})
+        //     }
+        // })
+        // return ()=> unsubscribe
     }, [auth])
 
     return {

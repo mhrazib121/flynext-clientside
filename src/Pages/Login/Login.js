@@ -7,16 +7,7 @@ const Login = () => {
     const {signinUsingGoogle} = useAuth();
 
     const handleGoogleLogin=()=>{
-        signinUsingGoogle()
-        .then(result => {
-            const user = result.user;
-            // setUser(user);
-            console.log(user);
-            
-        })
-        .catch((error)=>{
-            // setError(error.massage)
-        })
+        signinUsingGoogle();
     }
     return (
         <div className="banner-login banner-ls mx-auto">
