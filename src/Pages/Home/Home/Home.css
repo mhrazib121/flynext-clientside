@@ -1,0 +1,20 @@
+
+.banner{
+    background-image: url(../../../Images/travel41.jpg);
+    background-repeat:no-repeat;
+    /* width: 100%; */
+    background-size: cover;
+    /* background-position: 30%; */
+}
+.bg{
+    /* background-color: aquamarine; */
+    /* width: 50px; */
+}
+
+.font-icon{
+    font-size: 60px;
+    color: #0D6EFD;
+    background-color: #E4F5FF;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home/Home/Home';
+import Services from './Pages/Services/Services';
+import About from './Pages/About/About';
+import Header from './Pages/Shared/Header/Header';
+import Login from './Pages/Login/Login';
+import Footer from './Pages/Shared/Footer/Footer';
+import AuthProvider from './Context/AuthProvider';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="services" element={<Services />} />
+            <Route path="about" element={<About />} />
+            <Route path="placeorder" element={<PlaceOrder />} />
+            <Route path="login" element={<Login />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
