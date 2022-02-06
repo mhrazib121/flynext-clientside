@@ -22,19 +22,19 @@ const Home = () => {
         <div>
             <div className='banner mb-3' >
                 <div className='p-5 bg w-50'>
-                    <h1 className='p-3'> Best Worldwide Travel Agency</h1>
+                    <h1 className='p-3'> Best Worldwide <span className='text-color'>Travel Agency</span></h1>
                     <p className='p-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis itaque dicta, perferendis neque dolores ab cum magnam reprehenderit fugit eligendi voluptatibus doloremque blanditiis, facere rerum.</p>
-                    <button className='mt-3'> Explore Now</button>
+                    <button className='mt-3 btn-design'> Explore Now</button>
                 </div>
                 <div className='w-50'>
                     {/* <img src={banner} alt="" /> */}
                 </div>
             </div>
             <Services />
-            <div>
-                <div>
+            <div className='container'>
+                <div className='text-center my-5'>
                     <h3> Our Core Feature</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus nihil ducimus, magni minima adipisci aperiam. Consectetur, rerum eligendi! Neque, hic.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur  adipisicing elit. Necessitatibus <br /> nihil ducimus, magni minima adipisci aperiam. Consectetur, rerum eligendi! Neque, hic.</p>
                 </div>
                 <div>
                     <CardGroup>

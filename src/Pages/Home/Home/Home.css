@@ -1,14 +1,18 @@
 
 .banner{
-    background-image: url(../../../Images/travel41.jpg);
+    /* background-image: url(../../../Images/travel41.jpg); */
+    /* background-image: url(../../../Images/aircrew.jpg); */
+    background: linear-gradient(rgba(119, 119, 145, 0.753),#153a69d5),url(../../../Images/aircrew.jpg);
     background-repeat:no-repeat;
-    /* width: 100%; */
     background-size: cover;
-    /* background-position: 30%; */
+    background-position: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color: white;
 }
-.bg{
-    /* background-color: aquamarine; */
-    /* width: 50px; */
+
+.text-color{
+    color: #DCBB87;
 }
 
 .font-icon{
@@ -17,4 +21,29 @@
     background-color: #E4F5FF;
     padding: 10px 20px;
     border-radius: 5px;
+    text-align: center;
+}
+
+.font-icon:hover{
+    color: #E4F5FF;
+    background-color:#DCBB87 ;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-design{
+    padding: 1rem 2rem;
+    background-color: #DCBB87;
+    border: solid #DCBB87;
+    border-radius: 25px;
+    /* border: none; */
+    font-weight: 600;
+}
+
+.btn-design:hover{
+    background-color: white;
+    border-radius: 25px;
+    border: solid #DCBB87;
+    font-weight: 600;
+    color: #DCBB87;
+    transition: .5s ease-in-out;
 }

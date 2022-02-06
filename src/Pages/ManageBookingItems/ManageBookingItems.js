@@ -19,7 +19,7 @@ const ManageBookingItems = (props) => {
                             <h6>Status: {status} </h6>
                         </div>
                         <div className="d-flex justify-content-between align-items-center">
-                            <button onClick={() => props.deleteBooking(_id)} type="button" className="btn">Cancel</button>
+                            <button onClick={() => props.cancelBooking(_id)} type="button" className="btn">Cancel</button>
                             <h4> Price: <span className="text-success">${fee}</span></h4>
                         </div>
                         <br />

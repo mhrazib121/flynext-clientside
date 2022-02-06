@@ -1,0 +1,29 @@
+.btn-all{
+    padding: .5rem 1rem;
+    background-color: #DCBB87;
+    border: solid #DCBB87;
+    border-radius: 25px;
+    font-weight: 600;
+}
+.btn-all:hover{
+    background-color: white;
+    border-radius: 25px;
+    border: solid #DCBB87;
+    font-weight: 600;
+    color: #DCBB87;
+    transition: .5s ease-in-out;
+}
+
+.btn-all Link {
+  
+    
+}
+.link-d{
+    text-decoration: none;
+    color: black;
+}
+
+.link-d:hover{
+    text-decoration: none;
+    color: black;
+}

@@ -11,6 +11,7 @@ import AuthProvider from './Context/AuthProvider';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import MyBooking from './Pages/myBooking/MyBooking';
 import ManageBooking from './Pages/ManageBooking/ManageBooking';
+import AddNewService from './Pages/AddNewService/AddNewService';
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="services" element={<Services />} />
             <Route path="about" element={<About />} />
-            <Route path="placeorder" element={<PlaceOrder />} />
+            <Route path="placeorder/:id" element={<PlaceOrder />} />
             <Route path="mybooking" element={<MyBooking />} />
             <Route path="manageBooking" element={<ManageBooking />} />
+            <Route path="addnewservice" element={<AddNewService />} />
             <Route path="login" element={<Login />} />
           </Routes>
           <Footer />

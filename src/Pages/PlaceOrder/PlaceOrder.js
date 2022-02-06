@@ -8,14 +8,15 @@ const PlaceOrder = () => {
     const { register, handleSubmit, reset } = useForm();
     const { services } = useServices();
     const { id } = useParams();
-  
+
 
     const serviceData = services.find(service => service._id === id)
     console.log(serviceData);
     const onSubmit = data => {
         data.bookingPackage = serviceData;
         data.status = 'Pending';
-        axios.post('http://localhost:5000/bookings', data)
+
+        axios.post('https://polar-mesa-20065.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Placing order successfully');
@@ -25,9 +26,6 @@ const PlaceOrder = () => {
             })
     }
 
- 
-
-    
     return (
         <div className='container row mx-auto my-5 pt-5 pb-5'>
             <section className="col-lg-6 my-4  ">
@@ -38,13 +36,13 @@ const PlaceOrder = () => {
             </section>
             <section className='col-lg-6  my-4 mx-auto form-design text-center'>
                 <h3> Provide Your Information:</h3>
-                <form  onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("firstName")} /> <br />
                     <input type='email' {...register("email")} /> <br />
                     <input type='date' {...register("orderDate")} /> <br />
                     <input type='number' {...register("phone")} /> <br />
                     <input type='address' {...register("address")} /> <br />
-                    <input type="submit" to ="/mybooking" />
+                    <input type="submit" to="/mybooking" />
                 </form>
             </section>
         </div>

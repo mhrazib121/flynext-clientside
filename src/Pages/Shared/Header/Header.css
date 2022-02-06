@@ -1,0 +1,16 @@
+.link-design{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    /* background-color: black; */
+}
+.header-de{
+    background-color: rgba(31, 31, 63, 0.795);
+    position: fixed;
+    margin-right: auto;
+    z-index: 1000;
+}
+
+.header-de Link:hover{
+    color: red;
+}

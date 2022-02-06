@@ -9,9 +9,9 @@ const Services = () => {
     const { services } = useServices();
     console.log(services)
     return (
-        <div>
-            <h1 className="text-center my-3"> My booking </h1>
-            <Row xs={1} md={2} className="g-4">
+        <div className='container'>
+            <h1 className="text-center my-3"> Our services </h1>
+            <Row xs={1} md={3} className="g-4">
                 {
                     services.map(service => <ServiceItem key={service.id} service={service} />)
                 }
