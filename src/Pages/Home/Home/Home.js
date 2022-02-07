@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAmbulance, faHistory, faSearchDollar } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../../Hooks/useAuth';
 import useFirebase from '../../../Hooks/useFirebase';
+import BookingSearch from '../../BookingSearch/BookingSearch';
 
 const Home = () => {
     const clock = <FontAwesomeIcon icon={faHistory} />
@@ -30,7 +31,13 @@ const Home = () => {
                     {/* <img src={banner} alt="" /> */}
                 </div>
             </div>
+
+            <BookingSearch/>
+
+            {/* Service Section  */}
             <Services />
+
+            {/* Feature Section  */}
             <div className='container'>
                 <div className='text-center my-5'>
                     <h3> Our Core Feature</h3>

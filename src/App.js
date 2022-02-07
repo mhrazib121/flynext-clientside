@@ -12,6 +12,7 @@ import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import MyBooking from './Pages/myBooking/MyBooking';
 import ManageBooking from './Pages/ManageBooking/ManageBooking';
 import AddNewService from './Pages/AddNewService/AddNewService';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -24,10 +25,12 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="services" element={<Services />} />
             <Route path="about" element={<About />} />
-            <Route path="placeorder/:id" element={<PlaceOrder />} />
-            <Route path="mybooking" element={<MyBooking />} />
-            <Route path="manageBooking" element={<ManageBooking />} />
-            <Route path="addnewservice" element={<AddNewService />} />
+            <Route path="placeorder/:id" element={<RequireAuth>
+              <PlaceOrder />
+            </RequireAuth> } />
+            <Route path="mybooking" element={<RequireAuth><MyBooking /></RequireAuth>} />
+            <Route path="manageBooking" element={<RequireAuth><ManageBooking /></RequireAuth>} />
+            <Route path="addnewservice" element={<RequireAuth><AddNewService /></RequireAuth>} />
             <Route path="login" element={<Login />} />
           </Routes>
           <Footer />

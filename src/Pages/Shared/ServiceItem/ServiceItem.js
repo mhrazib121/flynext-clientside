@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 import "./ServiceItem.css"
 
 const ServiceItem = (props) => {
-    // console.log()
     const { _id, img, serviceName} = props.service;
-    console.log(img)
-    console.log(_id)
+    // console.log(img)
+    // console.log(_id)
     return (
         <div>
             <Col>
