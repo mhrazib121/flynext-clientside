@@ -30,8 +30,8 @@ const Footer = () => {
             <div className='my-4 p-3 me-auto ms-auto'>
                 <h6>Newsletter</h6>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, sit!</p>
-                <input type="email" />
-                <button>Subscribe Us</button>
+                <input className='subscribe-field' type="email" /> <br />
+                <button className='btn-all'>Subscribe Us</button>
             </div>
             </div>
         </div>

@@ -9,9 +9,44 @@ const BookingSearch = () => {
 
     }
     return (
-        <div className='container margin-all'>
-            
-            <form className='full-from' onSubmit={handleSubmit(onSubmit)}>
+        <div className='container py-5 margin-all'>
+
+            <div className='booking-banner'>
+                <h5 className='text-color text-center'> Ready to fly?</h5>
+                <h1 className='text-center tittle-color'> Book A Presonal Flight</h1>
+                <form className='d-lg-flex m-3' action="">
+                    <div className='mx-3 my-2 input-field' placeholder=''>
+                        <h6> Departure</h6>
+                        <input type="text" />
+                    </div>
+                    <div className='mx-3 my-2 input-field'>
+                        <h6> Destination</h6>
+                        <input type="text" />
+                    </div>
+                    <div className='mx-3 my-2 input-field'>
+                        <h6> Journey Date</h6>
+                        <input type="date" />
+                    </div>
+                    <div className='mx-3 my-2 input-field'>
+                        <h6> Passenger</h6>
+                        <input type="number" />
+                    </div>
+                </form>
+                <div className='d-flex justify-content-center'>
+                    <button className='btn-all '> Submit</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            {/* <form className='full-from' onSubmit={handleSubmit(onSubmit)}>
             <h3>Search Your Destination</h3>
                 <div className='from-design'>
                     <div className=' input-field  ms-auto me-auto'>
@@ -24,7 +59,7 @@ const BookingSearch = () => {
                 <div>
                     <input className='btn-design mt-2' type="submit" />
                 </div>
-            </form>
+            </form> */}
         </div>
     );
 };

@@ -6,3 +6,9 @@
     border:2px solid #DCBB87;
     border-radius: 30px;
 }
+.subscribe-field{
+    border: 1px solid #DCBB87;
+    padding: 1.5%;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}

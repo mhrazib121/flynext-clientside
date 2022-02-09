@@ -1,7 +1,5 @@
 
 .banner{
-    /* background-image: url(../../../Images/travel41.jpg); */
-    /* background-image: url(../../../Images/aircrew.jpg); */
     background: linear-gradient(rgba(119, 119, 145, 0.753),#153a69d5),url(../../../Images/aircrew.jpg);
     background-repeat:no-repeat;
     background-size: cover;
@@ -11,7 +9,7 @@
     color: white;
 }
 
-.text-color{
+.tittle-color{
     color: #DCBB87;
 }
 
@@ -31,7 +29,7 @@
 }
 
 .btn-design{
-    padding: 1rem 2rem;
+    padding: 2% 4%;
     background-color: #DCBB87;
     border: solid #DCBB87;
     border-radius: 25px;

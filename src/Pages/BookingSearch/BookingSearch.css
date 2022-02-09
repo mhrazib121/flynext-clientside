@@ -1,25 +1,27 @@
-.input-field{
+/* .input-field{
     padding-right:90px; 
-}
+} */
 .margin-all{
     display: flex;
     justify-content: center;
+    /* background-color: rebeccapurple; */
+    background: linear-gradient(rgb(226, 216, 216), url(../../Images/domagoj-cosic-nv5uZB7ReyY-unsplash.jpg));
 }
-.full-from{
+/* .full-from{
     text-align: center;
     margin-top: -9%;
     padding: 2%;
     background-color: rgb(226, 216, 216);
     width: 70%;
     border-radius: 25px;
-}
-.from-design{
+} */
+/* .from-design{
     display: flex;
     justify-content: center;
-}
-.input-field input{
-    width: 150%;
-    border: 2px solid #DCBB87 ;
-    border-radius: 10px;
-    padding: 12%;
+} */
+.input-field input{   
+    border: 1px solid #DCBB87 ;
+    border-radius: 5px;
+    padding: 5%;
+    text-align: center;
 }
