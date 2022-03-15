@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
     // const {signinUsingGoogle} = useAuth();
     const {signinUsingGoogle} = useAuth();
+    const [isLoading, setIsLoading]=useState(true)
     const location = useLocation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const redirect_url = location.state?.from || '/home'
 
@@ -16,13 +17,11 @@ const Login = () => {
             const user = result.user;
             // setUser(user);
             navigate(redirect_url)
-           
-            
+    
         })
         .catch((error)=>{
-            // setError(error.massage)
         })
-        
+        .finally(()=>setIsLoading(false)); 
     }
     return (
         <div className="banner-login banner-ls mx-auto">

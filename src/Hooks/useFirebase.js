@@ -9,50 +9,39 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const myName= 'razib';
     const [error, setError] = useState();
+    const [isLoading, setIsLoading] = useState(true);
     
-
-    
-
     const auth = getAuth();
+
+    // Login by using google account
     const signinUsingGoogle = () => {
+        setIsLoading(true);
     return signInWithPopup(auth, googleprovider)
       
     }
-
+    // Logout Function
     const logOut = ()=>{
+        setIsLoading(true)
         signOut (auth)
         .then(()=>{
             setUser({})
         })
+        .finally(()=>setIsLoading(false))
     }
 
-    // signOut(auth).then(() => {
-    //     // Sign-out successful.
-    // }).catch((error) => {
-    //     // An error happened.
-    // });
-
     useEffect(()=>{
-
         onAuthStateChanged(auth, user=>{
             if(user){
                 setUser(user)
             }
+            setIsLoading(false);
         })
-        // const unsubscribe = onAuthStateChanged (auth, user =>{
-        //     if(user){
-        //         setUser(user)
-        //     }
-        //     else{
-        //         setUser({})
-        //     }
-        // })
-        // return ()=> unsubscribe
     }, [auth])
 
     return {
         user,
         error,
+        isLoading,
         signinUsingGoogle,
         myName,
         logOut

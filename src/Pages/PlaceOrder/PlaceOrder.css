@@ -1,13 +1,26 @@
 
-/* .form-design{
-    padding: 200px;
-} */
+.booking-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.541),rgba(0, 0, 0, 0.548)) ,url(../../Images/banner-img2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 120vw 100vh;
+}
+.banner-size {
+    padding: 280px 0px;
+}
+.booking-details-bg{
+    background-color: rgba(241, 241, 241, 0.63);
+    border-radius: 40px;
+}
+.fontSize{
+    font-size: 68px;
+}
 .form-design input{
     margin-top: 10px;
     border: 2px solid #DCBB87 ;
-    border-radius: 10px;
+    border-radius: 25px;
     width: 300px;
-    padding: 10px;
-    /* margin-left: auto;
-    margin-right: auto; */
+    height: 60px;
+    padding: 15px;
 }

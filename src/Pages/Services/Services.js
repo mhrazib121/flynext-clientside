@@ -7,7 +7,6 @@ import Service from '../Shared/ServiceItem/ServiceItem';
 
 const Services = () => {
     const { services } = useServices();
-    console.log(services)
     return (
         <div className='container'>
             <h1 className="text-center my-3"> Our services </h1>
