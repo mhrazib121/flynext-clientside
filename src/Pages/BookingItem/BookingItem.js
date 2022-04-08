@@ -3,14 +3,21 @@ import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const BookingItem = (props) => {
-    const {_id, name, email, phone, address, status, payableCost} = props?.booking;
+    const { _id, name, email, phone, address, status, payableCost } = props?.booking;
     console.log(props)
     console.log(props.booking)
     console.log(props.booking.bookingPackage)
-    const { img, serviceName, fee } = props?.booking?.bookingPackage;
+    const { id, img, serviceName, fee } = props?.booking?.bookingPackage;
     return (
-        <div className= "container">
-         <Col className="shadow-lg">
+        <div className="container">
+            {/* <td>{id}</td>
+            <td>{serviceName}</td>
+            <td>{fee}</td>
+            <td><button>Cancel</button></td> */}
+
+
+
+            <Col className="shadow-lg">
                 <Card >
                     <Card.Img variant="top" src={img} />
                     <Card.Body>

@@ -1,34 +1,23 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
 
 const ManageBookingItems = (props) => {
-    const {_id, name, email, phone, address, status} = props?.booking;
-    const { img, serviceName, fee } = props?.booking?.bookingPackage;
+    const {_id,orderDate, firstName, email, phone, departure, destination,totalPerson,payableCost, status} = props?.booking;
+    const { img, serviceName } = props?.booking?.bookingPackage;
     return (
-        <div className= "container">
-         <Col className="shadow-lg">
-                <Card >
-                    <Card.Img variant="top" src={img} />
-                    <Card.Body>
-                        <Card.Title className="text-color fw-bold">{serviceName}</Card.Title>
-                        <div>
-                            <h6>Name: {name}</h6>
-                            <h6>Email: {email}</h6>
-                            <h6>Address: {address}</h6>
-                            <h6>Contact: {phone}</h6>
-                            <h6>Status: {status} </h6>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <button onClick={() => props.cancelBooking(_id)} type="button" className="btn">Cancel</button>
-                            <h4> Price: <span className="text-success">${fee}</span></h4>
-                        </div>
-                        <br />
-                        <button onClick={() => props.updateBooking(_id)} type="button" className="btn">Status Update</button>
-                        
-                    </Card.Body>
-                </Card>
-            </Col>   
-        </div>
+        <tr className= "text-center fw-light">
+            <td className='p-2 border text-wrap'>{orderDate}</td>
+            <td className='p-2 border'>{firstName}</td>
+            <td className='p-2 border'>{serviceName}</td>
+            <td className='p-2 border'>{email}</td>
+            <td className='p-2 border'>{phone}</td>
+            <td className='p-2 border'>{departure}</td>
+            <td className='p-2 border'>{destination}</td>
+            <td className='p-2 border'>{totalPerson}</td>
+            <td className='p-2 border'>{payableCost}</td>
+            <td className='p-2 border'>{status}</td>
+            <td className='p-2 border'><button onClick={() => props.updateBooking(_id)} type="button" className="btn btn-success">Update</button></td>
+            <td className='p-2 border'><button onClick={() => props.cancelBooking(_id)} type="button" className="btn btn-danger">Cancel</button></td>
+        </tr>
     );
 };
 

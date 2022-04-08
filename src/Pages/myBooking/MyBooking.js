@@ -45,6 +45,24 @@ const MyBooking = () => {
                     bookings.map(booking => <BookingItem key={booking?._id} cancelBooking={cancelBooking} booking={booking} />)
                 }
             </Row>
+            {/* <table>
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Cancel</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        bookings.map(booking => <BookingItem key={booking?._id} cancelBooking={cancelBooking} booking={booking} />)
+                    }
+                    
+                </tbody>
+
+            </table> */}
+
         </div>
     );
 };

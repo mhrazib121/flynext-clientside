@@ -9,6 +9,7 @@ import useAuth from '../../Hooks/useAuth';
 const PlaceOrder = () => {
     const { user } = useAuth();
     const [totalCost, setTotalCost] = useState(0);
+    const [person, setPerson] = useState(0);
     const [serviceCharge, setServiceCharge] = useState(0);
     const [insurance, setInsurance] = useState(0);
     const { register, handleSubmit, reset } = useForm();
@@ -25,6 +26,7 @@ const PlaceOrder = () => {
     // price calculation Start
 
     const totalPassenger = (e) => {
+        setPerson(e.target.value)
         setServiceCharge(60);
         setInsurance(20);
         const totalPassangerFee = serviceData?.fee * parseInt(e.target.value);
@@ -40,6 +42,7 @@ const PlaceOrder = () => {
         data.bookingPackage = serviceData;
         data.status = 'Pending';
         data.payableCost = finalCost;
+        data.totalPerson = person
 
         axios.post('https://polar-mesa-20065.herokuapp.com/bookings', data)
             .then(res => {
@@ -67,14 +70,14 @@ const PlaceOrder = () => {
                             <input type='email' {...register("email")} value={user.email} /> <br />
                         </div>
                         <div className='d-lg-flex'>
-                            <input className='me-3' type='date' {...register("orderDate")} /> <br />
-                            <input type='number' {...register("phone")} placeholder="Phone Number" /> <br />
+                            <input className='me-3' type='date' {...register("orderDate")} placeholder="Booking Date" required /> <br />
+                            <input type='number' {...register("phone")} placeholder="Phone Number" required/> <br />
                         </div>
                         <div className='d-lg-flex'>
-                            <input className='me-3' type='address' {...register("address")} placeholder="Departure" />
-                            <input type='address' {...register("address")} placeholder="Destination" /> <br />
+                            <input className='me-3' type='address' {...register("departure")} placeholder="Departure" required/>
+                            <input type='address' {...register("destination")} placeholder="Destination" required/> <br />
                         </div>
-                        <input onChange={totalPassenger} type="number" placeholder='Passenger No.' /> <br />
+                        <input onChange={totalPassenger} type="number" placeholder='Passenger No.' required/> <br />
                         <input type="submit" to="/mybooking" />
                     </form>
                 </section>

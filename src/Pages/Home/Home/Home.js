@@ -58,19 +58,19 @@ const Home = () => {
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div interval="1000" className="carousel-item active carousel-bg">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-md-block">
                             <h1 className='text-uppercase fw-bold'>Travel anywhere in the country</h1>
                         </div>
                         <img src={middBanner1} className="d-block w-100 carousel-img" alt="..." />
                     </div>
                     <div interval="1000" className="carousel-item carousel-bg" >
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-md-block">
                             <h1 className='text-uppercase fw-bold'>Best Team with world class services</h1>
                         </div>
                         <img src={middBanner2} className="d-block w-100 carousel-img" alt="..." />
                     </div>
                     <div interval="1000" className="carousel-item carousel-bg">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-md-block">
                             <h1 className='text-uppercase fw-bold'>Best Tour Packages & guide</h1>
                         </div>
                         <img src={middBanner3} className="d-block w-100 carousel-img" alt="..." />
