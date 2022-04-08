@@ -8,7 +8,7 @@ const ManageBooking = () => {
     useEffect(() => {
         fetch("https://polar-mesa-20065.herokuapp.com/bookings")
             .then(res => res.json())
-            .then(data => setBookings(data))
+            .then(data => setBookings(data.reverse()))
     }, [bookings])
 
     const updateBooking = id => {
@@ -76,9 +76,6 @@ const ManageBooking = () => {
                 }
                 </tbody>
             </table>
-            {/* <Row className="g-3 m-3" xs={1} md={3} >
-                
-            </Row> */}
         </div>
     );
 };
