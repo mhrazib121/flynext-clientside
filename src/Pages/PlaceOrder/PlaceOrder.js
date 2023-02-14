@@ -44,7 +44,7 @@ const PlaceOrder = () => {
         data.payableCost = finalCost;
         data.totalPerson = person
 
-        axios.post('https://polar-mesa-20065.herokuapp.com/bookings', data)
+        axios.post('https://flynext-serverside.vercel.app/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Placing order successfully');
@@ -71,13 +71,13 @@ const PlaceOrder = () => {
                         </div>
                         <div className='d-lg-flex'>
                             <input className='me-3' type='date' {...register("orderDate")} placeholder="Booking Date" required /> <br />
-                            <input type='number' {...register("phone")} placeholder="Phone Number" required/> <br />
+                            <input type='number' {...register("phone")} placeholder="Phone Number" required /> <br />
                         </div>
                         <div className='d-lg-flex'>
-                            <input className='me-3' type='address' {...register("departure")} placeholder="Departure" required/>
-                            <input type='address' {...register("destination")} placeholder="Destination" required/> <br />
+                            <input className='me-3' type='address' {...register("departure")} placeholder="Departure" required />
+                            <input type='address' {...register("destination")} placeholder="Destination" required /> <br />
                         </div>
-                        <input onChange={totalPassenger} type="number" placeholder='Passenger No.' required/> <br />
+                        <input onChange={totalPassenger} type="number" placeholder='Passenger No.' required /> <br />
                         <input type="submit" to="/mybooking" />
                     </form>
                 </section>

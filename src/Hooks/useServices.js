@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 const useServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://polar-mesa-20065.herokuapp.com/services')
+        fetch('https://flynext-serverside.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
