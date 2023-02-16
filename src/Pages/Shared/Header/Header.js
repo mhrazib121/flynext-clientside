@@ -11,18 +11,12 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" className='header-de w-100'>
             <Container>
-                {/* <Navbar.Brand href="#home">{logo}</Navbar.Brand> */}
                 <img src={logo} alt="" />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto ">
                         <Link className='mx-3 link-design' to="/home">Home</Link>
                         <Link className='mx-3 link-design' to="/services">Services</Link>
-                        {/* <Link className='mx-3 link-design' to="/mybooking">My Booking</Link>
-                        <Link className='mx-3 link-design' to="/managebooking">Manage Booking</Link>
-                        <Link className='mx-3 link-design' to="/addnewservice">Add Service</Link> */}
-
-
                         <Link className='mx-3 link-design' to="/services">Blog</Link>
                         <Link className='mx-3 link-design' to="/about">About Us</Link>
                     </Nav>
@@ -30,8 +24,6 @@ const Header = () => {
                         {
                             user.email ?
                                 <>
-                                    {/* <h5 className='text-light'>Email: {user.email}</h5> */}
-
                                     <div className="btn-group">
                                         <button type="button" className="btn btn-danger rounded-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                             {user.displayName}

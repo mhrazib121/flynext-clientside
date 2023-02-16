@@ -7,7 +7,7 @@ import banner from '../../Images/add-service-banner.jpg'
 const AddNewService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('https://polar-mesa-20065.herokuapp.com/services', data)
+        axios.post('https://flynext-serverside.vercel.app/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added new service successfully');

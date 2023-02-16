@@ -6,15 +6,15 @@ const ManageBooking = () => {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
-        fetch("https://polar-mesa-20065.herokuapp.com/bookings")
+        fetch("https://flynext-serverside.vercel.app/bookings")
             .then(res => res.json())
-            .then(data => setBookings(data))
+            .then(data => setBookings(data.reverse()))
     }, [bookings])
 
     const updateBooking = id => {
         const procced = window.confirm('Do you want to update booking status?');
         if (procced) {
-            const url = `https://polar-mesa-20065.herokuapp.com/bookings/${id}`;
+            const url = `https://flynext-serverside.vercel.app/bookings/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -35,7 +35,7 @@ const ManageBooking = () => {
     const cancelBooking = id => {
         const procced = window.confirm('Are you want to cancel booking?')
         if (procced) {
-            const url = `https://polar-mesa-20065.herokuapp.com/bookings/${id}`;
+            const url = `https://flynext-serverside.vercel.app/bookings/${id}`;
             fetch(url, {
                 method: 'delete'
             })
@@ -51,13 +51,31 @@ const ManageBooking = () => {
     }
     return (
         <div>
-            <h1 className="text-center my-3"> Manage All Booking </h1>
-            <Row className="g-3 m-3" xs={1} md={3} >
-                {
-                    bookings.map(booking => <ManageBookingItems key={booking?._id} booking={booking} cancelBooking={cancelBooking} updateBooking={updateBooking} > </ManageBookingItems>
-                    )
-                }
-            </Row>
+            <h1 className="text-center my-3 tittle-color"> Manage All Booking </h1>
+            <table className='container mb-5'>
+                <thead>
+                    <tr className='bg-primary text-light text-center fs-6 fw-bold'>
+                        <td className='border p-2'>Order Date</td>
+                        <td className='border p-2'>Customer Name</td>
+                        <td className='border p-2'>Package Name</td>
+                        <td className='border p-2'>Email</td>
+                        <td className='border p-2'>Phone</td>
+                        <td className='border p-2'>Departure</td>
+                        <td className='border p-2'>Destination</td>
+                        <td className='border p-2'>Pass. Number</td>
+                        <td className='border p-2'>Fee</td>
+                        <td className='border p-2'>Delivery Status</td>
+                        <td className='border p-2'>Update Delivery</td>
+                        <td className='border p-2'>Order Cancel</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        bookings.map(booking => <ManageBookingItems key={booking?._id} booking={booking} cancelBooking={cancelBooking} updateBooking={updateBooking} > </ManageBookingItems>
+                        )
+                    }
+                </tbody>
+            </table>
         </div>
     );
 };

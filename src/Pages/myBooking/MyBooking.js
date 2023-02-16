@@ -10,7 +10,7 @@ const MyBooking = () => {
 
 
     useEffect(() => {
-        fetch("https://polar-mesa-20065.herokuapp.com/bookings")
+        fetch("https://flynext-serverside.vercel.app/bookings")
             .then(res => res.json())
             .then(data => {
                 const myBookings = data.filter(booking => booking.email === user.email);
@@ -22,7 +22,7 @@ const MyBooking = () => {
         const procced = window.confirm('Do you want to cancel your booking?');
 
         if (procced) {
-            const url = `https://polar-mesa-20065.herokuapp.com/bookings/${id}`;
+            const url = `https://flynext-serverside.vercel.app/bookings/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -45,6 +45,24 @@ const MyBooking = () => {
                     bookings.map(booking => <BookingItem key={booking?._id} cancelBooking={cancelBooking} booking={booking} />)
                 }
             </Row>
+            {/* <table>
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Cancel</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        bookings.map(booking => <BookingItem key={booking?._id} cancelBooking={cancelBooking} booking={booking} />)
+                    }
+                    
+                </tbody>
+
+            </table> */}
+
         </div>
     );
 };

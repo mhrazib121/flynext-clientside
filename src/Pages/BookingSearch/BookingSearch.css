@@ -1,27 +1,25 @@
-/* .input-field{
-    padding-right:90px; 
-} */
+
 .margin-all{
-    display: flex;
-    justify-content: center;
-    /* background-color: rebeccapurple; */
-    background: linear-gradient(rgb(226, 216, 216), url(../../Images/domagoj-cosic-nv5uZB7ReyY-unsplash.jpg));
+    margin-top: -120px;
 }
-/* .full-from{
-    text-align: center;
-    margin-top: -9%;
-    padding: 2%;
-    background-color: rgb(226, 216, 216);
-    width: 70%;
+.home-booking{
+    background: linear-gradient(rgba(119, 119, 145, 0.753),#153a69d5), url(../../Images/inner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 25px;
-} */
-/* .from-design{
-    display: flex;
-    justify-content: center;
-} */
+}
 .input-field input{   
     border: 1px solid #DCBB87 ;
     border-radius: 5px;
     padding: 5%;
     text-align: center;
+}
+.sub-btn{
+    margin-top: 3%;
+    padding: 8px;
+    width: 100px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
 }

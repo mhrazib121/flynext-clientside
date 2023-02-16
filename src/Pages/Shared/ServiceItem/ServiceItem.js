@@ -4,17 +4,18 @@ import { Link } from 'react-router-dom';
 import "./ServiceItem.css"
 
 const ServiceItem = (props) => {
-    const { _id, img, fee, serviceName } = props.service;
+    const { _id, img, fee, serviceName, description } = props.service;
+    console.log("ser", props.service)
     return (
         <div data-aos="zoom-in-down" data-aos-delay="500" data-aos-easing="ease-in-sine">
             <Col >
                 <Card className="card-design">
                     <Card.Img variant="top" src={img} />
+                    <p>fsfsf</p>
                     <Card.Body>
                         <Card.Title className="text-color text-center">{serviceName}</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.
+                            {description}
                         </Card.Text>
                         <div className='d-lg-flex align-items-center'>
                             <button className='btn-all'> <Link className='link-d' to={`/placeorder/${_id}`}>Booking Now</Link> </button>
