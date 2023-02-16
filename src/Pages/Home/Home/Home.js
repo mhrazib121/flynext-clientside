@@ -17,8 +17,6 @@ const Home = () => {
     const money = <FontAwesomeIcon icon={faSearchDollar} />
     const safety = <FontAwesomeIcon icon={faAmbulance} />
 
-    console.log("adads", services)
-
     if (isServiceLoading) {
         return (
             <div className="d-flex justify-content-center align-items-center" style={{ height: "800px" }}>
