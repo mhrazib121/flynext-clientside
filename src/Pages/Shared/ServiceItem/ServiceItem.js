@@ -5,13 +5,11 @@ import "./ServiceItem.css"
 
 const ServiceItem = (props) => {
     const { _id, img, fee, serviceName, description } = props.service;
-    console.log("ser", props.service)
     return (
         <div data-aos="zoom-in-down" data-aos-delay="500" data-aos-easing="ease-in-sine">
             <Col >
                 <Card className="card-design">
                     <Card.Img variant="top" src={img} />
-                    <p>fsfsf</p>
                     <Card.Body>
                         <Card.Title className="text-color text-center">{serviceName}</Card.Title>
                         <Card.Text>
