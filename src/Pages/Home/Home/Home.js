@@ -21,7 +21,7 @@ const Home = () => {
 
     if (isServiceLoading) {
         return (
-            <div className="d-flex justify-content-center align-items-center" style={{ height: "500px" }}>
+            <div className="d-flex justify-content-center align-items-center" style={{ height: "800px" }}>
                 <div className="spinner-border text-primary" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>

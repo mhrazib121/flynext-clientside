@@ -6,7 +6,6 @@ import BookingItem from '../BookingItem/BookingItem';
 const MyBooking = () => {
     const { user } = useAuth();
     const [bookings, setBookings] = useState([]);
-    console.log(user.email);
 
 
     useEffect(() => {

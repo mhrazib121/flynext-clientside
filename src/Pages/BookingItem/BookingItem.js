@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 
 const BookingItem = (props) => {
     const { _id, name, email, phone, address, status, payableCost } = props?.booking;
-    console.log(props)
-    console.log(props.booking)
-    console.log(props.booking.bookingPackage)
     const { id, img, serviceName, fee } = props?.booking?.bookingPackage;
     return (
         <div className="container">
@@ -35,7 +32,7 @@ const BookingItem = (props) => {
                         </div>
                     </Card.Body>
                 </Card>
-            </Col>   
+            </Col>
         </div>
     );
 };

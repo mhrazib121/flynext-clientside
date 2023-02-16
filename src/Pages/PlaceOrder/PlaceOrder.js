@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     const [serviceCharge, setServiceCharge] = useState(0);
     const [insurance, setInsurance] = useState(0);
     const { register, handleSubmit, reset } = useForm();
-    const { services } = useServices();
+    const [services] = useServices();
     const location = useLocation();
     const navigate = useNavigate();
     const { id } = useParams();
@@ -53,6 +53,7 @@ const PlaceOrder = () => {
                 }
             })
     }
+
 
     return (
         <div>
